@@ -1,5 +1,6 @@
+<%@ page import="org.springframework.web.context.WebApplicationContext" %>
 <%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
-<%@ page import="org.springframework.web.context.WebApplicationContext" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: FengHaixin
   Date: 2016-05-17
@@ -25,13 +26,12 @@
 <%
     if (names != null && names.length > 0)
     {
-        for (int i = 0,len = names.length; i < len; i++)
+        for (int i = 0, len = names.length; i < len; i++)
         {
-            out.(names[i]);
+            out.println(names[i]);
         }
     }
 %>
-
 </body>
 </html>
 

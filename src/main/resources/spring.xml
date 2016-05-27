@@ -28,7 +28,7 @@
 
     <!-- 配置调度任务-->
     <bean name="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-        <property name="configLocation" value="classpath:/quartz.properties"/>
+        <property name="configLocation" value="classpath:quartz.properties"/>
         <property name="dataSource" ref="dataSource"/>
         <property name="transactionManager" ref="transactionManager"/>
 
@@ -60,7 +60,7 @@
 
     <!-- 配置Job详情 -->
     <bean name="printCurrentTimeJobs" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-        <property name="jobClass" value="com.aaron.framework.clusterquartz.job.PrintCurrentTimeJobs"/>
+        <property name="jobClass" value="com.aaron.clusterquartz.job.PrintCurrentTimeJobs"/>
         <!--<property name="jobDataAsMap">
             <map>
                 <entry key="clusterQuartz" value="com.aaron.framework.clusterquartz.job.ClusterQuartz"/>
