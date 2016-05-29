@@ -13,7 +13,7 @@ import java.util.Date;
 @Controller
 public class ClusterQuartz
 {
-    public static void printUserInfo()
+    public void printUserInfo()
     {
         System.out.println("***      start " + DateUtils.dateToString(new Date(), "yyyy-MM-dd HH:mm:ss:SSS") + "    *************");
 
@@ -23,11 +23,5 @@ public class ClusterQuartz
         System.out.println("*");
 
         System.out.println("*********current user information end******************");
-    }
-
-
-    public static void main(String[] args)
-    {
-        printUserInfo();
     }
 }
