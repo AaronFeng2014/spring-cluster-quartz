@@ -15,8 +15,6 @@ public class PersistableCronTriggerFactoryBean extends CronTriggerFactoryBean
     public void afterPropertiesSet() throws ParseException
     {
         super.afterPropertiesSet();
-
-
         getJobDataMap().remove(getObject().getJobKey().getName());
     }
 }

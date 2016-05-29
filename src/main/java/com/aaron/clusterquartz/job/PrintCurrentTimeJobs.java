@@ -27,7 +27,7 @@ public class PrintCurrentTimeJobs extends QuartzJobBean
     {
         LOG_RECORD.info("begin to execute task," + DateUtils.dateToString(new Date()));
 
-        clusterQuartz.printCurrentTime();
+        clusterQuartz.printUserInfo();
 
         LOG_RECORD.info("end to execute task," + DateUtils.dateToString(new Date()));
 
