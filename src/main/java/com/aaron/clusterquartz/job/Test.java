@@ -12,10 +12,10 @@ public class Test
     public static void main(String[] args)
     {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/aaron/framework/quartz/spring.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
         ClusterQuartz clusterQuartz = (ClusterQuartz)context.getBean("clusterQuartz");
-        clusterQuartz.printCurrentTime();
+        clusterQuartz.printUserInfo();
 
         while (true)
         {

@@ -1,6 +1,5 @@
 package com.aaron.clusterquartz.job;
 
-import com.arron.util.DateUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.quartz.JobExecutionContext;
@@ -27,7 +26,7 @@ public class PrintCurrentTimeJobs extends QuartzJobBean
     {
         LOG_RECORD.info("begin to execute task," + DateUtils.dateToString(new Date()));
 
-        clusterQuartz.printCurrentTime();
+        clusterQuartz.printUserInfo();
 
         LOG_RECORD.info("end to execute task," + DateUtils.dateToString(new Date()));
 

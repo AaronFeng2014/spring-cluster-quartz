@@ -11,7 +11,7 @@
         <!--<property name="jndiName" value="java:comp/env/jndi/mysql/quartz"/>-->
 
         <!-- jboss -->
-        <property name="jndiName" value="jdbc/quartz"/>
+        <property name="jndiName" value="java:/MysqlDS/quartz"/>
     </bean>
     <!-- 分布式事务配置 start -->
 
@@ -71,7 +71,7 @@
     </bean>
 
     <!-- 配置触发时间 -->
-    <bean name="printCurrentTimeScheduler" class="com.aaron.clusterquartz.cron.PersistableCronTriggerFactoryBean">
+    <bean name="printCurrentTimeScheduler" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <property name="jobDetail" ref="printCurrentTimeJobs"/>
         <property name="cronExpression">
             <value>0/10 * * * * ?</value>

@@ -1,7 +1,10 @@
 package com.aaron.clusterquartz.cron;
 
 import java.text.ParseException;
+
+import org.quartz.JobDetail;
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
+import org.springframework.scheduling.quartz.JobDetailFactoryBean;
 
 /**
  * @author FengHaixin
@@ -15,8 +18,6 @@ public class PersistableCronTriggerFactoryBean extends CronTriggerFactoryBean
     public void afterPropertiesSet() throws ParseException
     {
         super.afterPropertiesSet();
-
-
         getJobDataMap().remove(getObject().getJobKey().getName());
     }
 }
